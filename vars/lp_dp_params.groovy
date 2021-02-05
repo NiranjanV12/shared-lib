@@ -12,6 +12,7 @@ def call(){
             jobName = sh(returnStdout: true, script: "echo $JOB_NAME").split('/')[-1].trim()
 
             stage('parameter checks') {
+println "lpdp params testinggg"
                 if (params.absolute_job_path == "") {
                     println(ANSI_BOLD + ANSI_RED + '''\
                     Uh oh! Please specify the full path of the job from where the metedata.json file should be copied

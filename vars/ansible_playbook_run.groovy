@@ -8,6 +8,7 @@ def call(Map pipelineParams) {
             String ANSI_YELLOW = "\u001B[33m"
 
             stage('ansible-run') {
+println "ansible playbook run testinggg"
                 println pipelineParams
                 dir("$pipelineParams.currentWs/private") {
                     if (!env.private_repo_url || !env.private_repo_branch || !env.private_repo_credentials) {
