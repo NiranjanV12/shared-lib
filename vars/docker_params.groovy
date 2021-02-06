@@ -30,6 +30,7 @@ def call(){
                 }
                 values = [:]
                 try {
+                    echo "dockerparams testinggg"
                     copyArtifacts projectName: params.absolute_job_path, flatten: true
                 }
                 catch (err) {
